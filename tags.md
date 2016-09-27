@@ -1,18 +1,18 @@
 ---
 layout: page
 title: "Tags"
-description: "Not yet finished"  
+description: "这里是所有发布文章的关键词，酷一点的名字叫“文章基因”，随便点点看吧"  
 header-img: "img/semantic.jpg"  
 ---
-<!--
-##本页使用方法
+
+## 本页使用方法
 
 1. 在下面选一个你喜欢的词
 2. 点击它
 3. 相关的文章会「唰」地一声跳到页面顶端
 4. 马上试试？
 
-##基因列表
+## 基因列表
 
 
 <div id='tag_cloud'>
@@ -44,4 +44,3 @@ $(function () {
     $('#tag_cloud a').tagcloud();
 });
 </script>
--->
