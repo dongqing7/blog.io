@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About"
-description: ""
+description: "Not yet finished"
 header-img: "img/green.jpg"
 ---
 
