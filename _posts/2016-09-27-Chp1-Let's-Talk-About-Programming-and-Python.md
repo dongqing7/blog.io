@@ -5,6 +5,7 @@ date: 2016-09-27
 categories: teaching
 tags: [teaching, Programming-Using-Python, 编程, Python ]
 description: 教授这门课不是义务，准备的本身就是报酬。
+---
 
 本章包含内容如下：
 
