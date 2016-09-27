@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "milestone"
-description: "知之真切笃实处即是行，行之明觉精察处即是知 "
+description: "内心安详是安身之所，知足忍辱乃是立命之处 "
 header-img: "img/zhihu.jpg"
 ---
 
@@ -11,14 +11,12 @@ header-img: "img/zhihu.jpg"
 </center>
 
 
-###代表作：
+### 如何。。：
 
 
-- [《世界并非如你所见——用可供性来发现更大的世界》](http://www.jianshu.com/p/6f1404e0240d)
+- [尚无更新](http://)
 
-- [《如何正确地练习写作》](http://www.jianshu.com/p/2621444b619d)
 
-- [《24款最值得推荐的中文字体》](http://cnfeat.com/blog/2015/05/22/a-24-chinese-fonts/)
 
 
 
