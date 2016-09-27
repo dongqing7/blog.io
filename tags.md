@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "Tags"
-description: ""  
+description: "Not yet finished"  
 header-img: "img/semantic.jpg"  
 ---
-
+<!--
 ##本页使用方法
 
 1. 在下面选一个你喜欢的词
@@ -44,3 +44,4 @@ $(function () {
     $('#tag_cloud a').tagcloud();
 });
 </script>
+-->
