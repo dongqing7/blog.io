@@ -12,6 +12,7 @@ Ps
 
 * 1、起步，以及如何起步。
 * 2、为什么是Python？
+* 3、Python在Windows下的安装和使用
 
 ## 1、起步，以及如何起步。
 
@@ -38,7 +39,9 @@ Ps
 
 
 ## 2、为什么是Python？
-看了[《Think Python 2e》](http://www.codingpy.com/books/thinkpython2/00-preface.html) 的前言，或许你能一下明白我的初衷。约翰大叔说：虽然每种编程语言都不同，但绝没有设计者所说的那么大，尤其对于初学编程人而言，但在某些方面它们的差异是不可小觑的：
+看了[《Think Python 2e》](http://www.codingpy.com/books/thinkpython2/00-preface.html) 的前言，或许你能一下明白我的初衷。顺便一提的是，该书的作者Allen B. Downey是个非常有个性的教授，推荐大家看看他的[博客](http://www.allendowney.com/wp/)，里面有很精彩的关于计算机人员如何从事统计学相关的数据分析的方法指导。这是大叔的照片![Alt Allen Downey](http://www.olin.edu/sites/default/files/downey_allen_0.jpg)
+
+在另外一本书《编程导论》，该作者是另一位大叔，John V. Guttag，约翰大叔说：虽然每种编程语言都不同，但绝没有设计者所说的那么大，尤其对于初学编程人而言，但在某些方面它们的差异是不可小觑的：
 
 * 1、 低级还是高级：指是否直接在机器底层使用指令和数据对象编程，还是使用由语言设计者提供的更加抽象的操作来编程；
 * 2、 通用还是特定应用领域：指编程语言的原始操作符应用领域是很广泛还是专门针对某一个领域。例如，Adobe Flash的设计目的是快速为网页添加动画和动态交互，你绝对不想用它来构建一个股票投资综合分析系统；
@@ -76,13 +79,22 @@ Ps
 - tensorflow Google开源的第二代深度学习框架，有C++和Python版本；
 - PADDLE 百度开源的深度学习框架，有C++和Python版本；
 
+## 3、Python Windows下的安装和使用
+
+**Python 2 还是Python 3？**
+
+目前Python有两个版本，分别是Python 2和Python 3。二者十分相似，因此如果你学过某个版本，可以很容易地切换到另一个版本。事实上，作为初学者，你只会接触到很少数的不同之处。本书采用的是Python 3，但是我会加入一些关于Python 2的说明。
 
 
-以上内容多处参考以下资源和书目，如有侵害权益的行为，请给我发送邮件告知，我将在第一时间修改和删除：
+
+以上内容多处参考以下资源和书目，如有侵害权益的行为，请给留言或发送邮件告知，我将在第一时间修改和删除：
 
 > 1. [《Think Python 2e》中译本](http://www.codingpy.com/books/thinkpython2/index.html)
-> 2. Guttag, John V. 编程导论. Translated by 梁杰. 人民邮电出版社, 2015.
+> 2. [Guttag, John V. 编程导论. Translated by 梁杰. 人民邮电出版社, 2015.](https://book.douban.com/subject/26368668/)
+> 3. [Lubanovic, Bill. Python语言及其应用. Translated by 丁嘉瑞, 梁 杰, and 禹常隆. 人民邮电出版社, 2015.](https://book.douban.com/subject/26675127/.)
 
+
+以上几本都可以作为入门Python的学习参考，其中编程导论尤为清晰，不足之处是基于Python 2.\*。
 
 * 2016年9月27日 10:52:17 初稿
 
