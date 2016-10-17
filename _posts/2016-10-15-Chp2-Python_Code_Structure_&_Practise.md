@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python分支与循环,动手练习
+title: Python分支与循环
 date: 2016-10-15
 categories: teaching
 tags: [teaching, Programming-Using-Python, 编程, Python ]
@@ -16,7 +16,8 @@ description: 教授这门课不是义务，准备的本身就是报酬。
 
 ## 1、 分支程序
 在Python中，条件语句的形式是：
-```{python}
+
+```python
 if *Boolean expression*:
   # Block of codes
 elif:
@@ -26,6 +27,7 @@ else:
 ```
 
 例如下面的代码，当x除以2的余数是0时，表达式x%2==0的值是True，否则是False。其中，**==**是用来比较的操作符。
+
 ```python
 if x%2 == 0:
     print('Even')
@@ -38,6 +40,7 @@ print('Done with conditional')
 
 ### 条件语句的嵌套
 条件语句的嵌套是指条件语句中的代码块包含另一个条件语句。例如下面的代码：
+
 ```python
 if x%2 == 0:
     if x%3 == 0:
@@ -50,6 +53,7 @@ elif x%3 == 0:
 上面的代码中，elif表示“else if”。
 
 在条件语句中使用复合布尔表达式也是很方便的，例如：
+
 ```python
 if x<2 and x>0:
     print('x is between 0 and 2')
@@ -69,6 +73,7 @@ else:
 
 ## 2、循环
 循环是以一个检测开始，如果检测的结果为真（True，C语言中非零的话，程序即进入循环体，然后重新进行检测，直到检测结果为假（False，C语言中为0），循环结束，控制流进入下一段代码。看下面一段代码:
+
 ```python
 x = 3
 ans = 0
@@ -91,6 +96,7 @@ print(str(x) + '*' + str(x) + '=' + str(ans))
 ## 3、动手练习
 结合上面提到的分支与循环以及《Think in Python 2e》第二、五章内容，可以试试下面的练习：
 ### 3.1 穷举法
+
 ```Python
 x = int(input('enter an int:'))
 ans = 0
@@ -112,6 +118,7 @@ else:
 ### 3.2 近似解与二分查找
 
 #### 查找平方根的近似解
+
 ```python
 x = 25
 e = 0.01
@@ -128,6 +135,7 @@ else:
 ```
 
 #### 使用二分查找寻找近似平方根
+
 ```python
 x = 25
 e = 0.01
@@ -148,6 +156,7 @@ print('%s is close to square root of %s' % (ans, x))
 ```
 
 #### 使用牛顿-拉夫逊方法寻找平方根
+
 ```python
 # 寻找x， 满足x**2 - 24在e 和 0 之间
 e = 0.01
