@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python 编程起步
+title: Python分支与循环,动手练习
 date: 2016-10-15
 categories: teaching
 tags: [teaching, Programming-Using-Python, 编程, Python ]
@@ -89,4 +89,76 @@ print(str(x) + '*' + str(x) + '=' + str(ans))
 
 
 ## 3、动手练习
-d 
+结合上面提到的分支与循环以及《Think in Python 2e》第二、五章内容，可以试试下面的练习：
+### 3.1 穷举法
+```Python
+x = int(input('enter an int:'))
+ans = 0
+while ans**3 < abs(x):
+    ans = ans + 1
+if ans**3 != abs(x):
+    print('%s is not a perfect cube' % (x))
+else:
+    if x < 0:
+        ans = -ans
+    print('Cube root of %s is %s' % (x, ans))
+```
+这段程序如何正确运行的呢：
+
+- 表达式ans**3的值从0开始，每次循环都会变得更大
+- 当它到达或者超过abs(x)时，循环终止
+- 因为abs(x)总是正数，所以循环的次数必然是有限的
+
+### 3.2 近似解与二分查找
+
+#### 查找平方根的近似解
+```python
+x = 25
+e = 0.01
+step = e ** 2
+num_Guesses = 0
+while abs(ans**2 - x) >= e and ans <= x:
+  ans += step
+  num_Guesses += 1
+print('num_Guesses = %s' % num_Guesses)
+if abs(ans**2 -x) >= e:
+  print('Failed on square root of %s' % x)
+else:
+  print('%s is close to square root of %s' % (ans, x))
+```
+
+#### 使用二分查找寻找近似平方根
+```python
+x = 25
+e = 0.01
+num_Guesses = 0
+low = 0
+high = max(1.0, x)
+ans = (high + low) / 2.0
+while abs(ans**2 - x) >= e:
+  print('low = %s, high = %s, ans = %s' % (low, high, ans))
+  num_Guesses += 1
+  if ans**2 < x:
+    low = ans
+  else:
+    high = ans
+  ans = (high + low) / 2.0
+print('num_Guesses = %s' % num_Guesses)
+print('%s is close to square root of %s' % (ans, x))
+```
+
+#### 使用牛顿-拉夫逊方法寻找平方根
+```python
+# 寻找x， 满足x**2 - 24在e 和 0 之间
+e = 0.01
+k = 24.0
+guess = k/2.0
+while abs(guess*guess - k) >= e:
+  guess = guess - (((guess**2) - k)/(2*guess))
+print('square root of %s is about %s' % (k, guess))
+```
+-----------------------------------------------
+
+试试看：给牛顿-拉夫逊方法的具体实现添加一些代码，跟踪寻找解的循环次数。使用这个次数来比较牛顿-拉夫逊方法和二分查找方法的效率，哪个会**更高**呢？
+
+-----------------------------------------------
