@@ -1,4 +1,20 @@
-## 分支程序
+---
+layout: post
+title: Python 编程起步
+date: 2016-10-15
+categories: teaching
+tags: [teaching, Programming-Using-Python, 编程, Python ]
+description: 教授这门课不是义务，准备的本身就是报酬。
+---
+
+本章包含内容如下：
+
+* 1、分支程序
+* 2、循环
+* 3、动手练习
+
+
+## 1、 分支程序
 在Python中，条件语句的形式是：
 ```{python}
 if *Boolean expression*:
@@ -10,7 +26,7 @@ else:
 ```
 
 例如下面的代码，当x除以2的余数是0时，表达式x%2==0的值是True，否则是False。其中，**==**是用来比较的操作符。
-```{python}
+```python
 if x%2 == 0:
     print('Even')
 else:
@@ -22,7 +38,7 @@ print('Done with conditional')
 
 ### 条件语句的嵌套
 条件语句的嵌套是指条件语句中的代码块包含另一个条件语句。例如下面的代码：
-```{python}
+```python
 if x%2 == 0:
     if x%3 == 0:
         print("Divisible by 2 and 3")
@@ -34,7 +50,7 @@ elif x%3 == 0:
 上面的代码中，elif表示“else if”。
 
 在条件语句中使用复合布尔表达式也是很方便的，例如：
-```{python}
+```python
 if x<2 and x>0:
     print('x is between 0 and 2')
 elif x>2:
@@ -51,9 +67,9 @@ else:
 
 -----------------------------------------------
 
-## 循环
+## 2、循环
 循环是以一个检测开始，如果检测的结果为真（True，C语言中非零的话，程序即进入循环体，然后重新进行检测，直到检测结果为假（False，C语言中为0），循环结束，控制流进入下一段代码。看下面一段代码:
-```{python}
+```python
 x = 3
 ans = 0
 left_item = x
@@ -72,3 +88,4 @@ print(str(x) + '*' + str(x) + '=' + str(ans))
 | 4 | 3 | 9 | 0 |
 
 
+## 3、动手练习
