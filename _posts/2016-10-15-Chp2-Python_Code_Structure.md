@@ -89,3 +89,4 @@ print(str(x) + '*' + str(x) + '=' + str(ans))
 
 
 ## 3、动手练习
+d 
