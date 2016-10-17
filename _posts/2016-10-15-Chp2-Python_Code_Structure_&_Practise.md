@@ -96,6 +96,7 @@ print(str(x) + '*' + str(x) + '=' + str(ans))
 
 ## 3、动手练习
 结合上面提到的分支与循环以及《Think in Python 2e》第二、五章内容，可以试试下面的练习：
+
 ### 3.1 穷举法
 
 ```Python
