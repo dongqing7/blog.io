@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3-Python函数使用方法与常见数据结构
+title: Python函数使用方法与常见数据结构
 date: 2016-10-26
 categories: Introducing Python
 tags: [teaching, Python, Methods, List, Tuple, Dictionary ]
