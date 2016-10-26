@@ -96,35 +96,78 @@ def printName(firstName, lastName, reverse = False):
 如果使用默认值，程序员在调用函数是就可以不传入所有参数。
 
 ### 1.1.3 作用域
+namespace，翻译过来叫命名空间，每个函数都定义了自己的命名空间，在该命名空间下的变量只在本空间内可见。在Python的一个模块（后文会讲）中，默认为全局命名空间（global namespace），可以通过关键词在该模块的函数内访问并修改全局变量。
 
 ```python
-def f(x):
-    y = 1
-    x = x + y
-    print 'x =',x
-    return x
-	
-x = 3
-y = 2
-z = f(x)
-print 'z = ',z
-print 'x = ',x
-print 'y = ',y
+>>> animal = 'fruitbat'
+>>> def print_global():
+        '''
+	不用声明，直接访问全局变量，看上去有点怕怕的
+	'''
+       print('inside print_global:', animal)
+
+>>> print('at the top level:', animal)
+at the top level: fruitbat
+>>> print_global()
+inside print_global: fruitbat
+
+>>> def change_and_print_global():
+        '''
+	先访问全局变量animal，然后尝试修改该变量，然后就悲剧了。。。。
+	'''
+...     print('inside change_and_print_global:', animal)
+...     animal = 'wombat'
+...     print('after the change:', animal)
+...
+>>> change_and_print_global()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in change_and_report_it
+UnboundLocalError: local variable 'animal' referenced before assignment
+
+>>> def change_local():
+        '''
+	直接创建新的变量，animal，虽然与global变量animal名字相同，但没有关系
+	'''
+...     animal = 'wombat'
+...     print('inside change_local:', animal, id(animal))
+...
+>>> change_local()
+inside change_local: wombat 4330406160
+>>> animal
+'fruitbat'
+>>> id(animal)
+4330390832
 ```
 
-运行后会输出：
+再看下面的代码：
 
-x = 4
-z = 4
-x = 3
-y = 2
+```python
+animal = 'fruitbat'
+def change_and_print_global():
+    '''
+    正经的做法就是，但凡用到全局变量，不管是访问还是修改，一律在一开始，用global关键词进行声明
+    '''
+    global animal
+    animal = 'wombat'
+    print('inside change_and_print_global:', animal)
 
-调用 f 时，形参x在局部被绑定到了实参x的值。需要注意的是虽然形参和实参的名称相同，但是他们并不是同一个变量。每个函数都会定义一个新的命名空间，也被称为作用域。f 中的形参x和局部变量y只存在于f 定义的作用域中。函数体中的赋值语句x = x + y将局部名称x绑定到对象4，但是对于f 作用域外的名称x和y的绑定没有任何影响。
+>>> animal
+'fruitbat'
+>>> change_and_print_global()
+inside change_and_print_global: wombat
+>>> animal
+'wombat'
+
+
+```
+
 
 **思考一下**：如果关于求平凡根的需求变了呢，比如我想计算数值8219的近似平方根，同时精度要达0.00005；或者计算（23、96、137、337、963..到10333的平凡根，而且，数值越大，所需要的精度曾递减，比如从0.01、0.001、0.00001、0.000003等，那你如果更新上面的代码以满足此类需求？
 
 -----------------------------------------------
 试试看：将上述需求，通过函数进行包装，配合调用方的代码，就可以轻松完成以上任务，例如可以这样写：
+
 ```python
 def cal_approximate_root(tvalue, epsilon=0.001):
     numGuesses = 0
@@ -137,7 +180,8 @@ def cal_approximate_root(tvalue, epsilon=0.001):
     return ans
 ```
 -----------------------------------------------
-如果我的需求又变了呢，比如我想在不同的条件下求平方根或立方根的近似值，如果更改以上代码，一起满足需求？
+
+如果我的需求又变了呢，比如我想在不同的条件下求平方根或立方根的近似值，如果更改以上代码，以满足需求？
 
 ### 1.2 全局变量
 
