@@ -30,8 +30,8 @@ while abs(ans**2 - x) >= epsilon:
     else:
         high = ans
     ans = (high + low)/2.0
-    print 'numGuess = ',numGuess
-    print ans,'is close to square root of'.x
+    print('numGuess = ',numGuess)
+    print(ans,'is close to square root of', x)
 ```
 
 这段代码只能处理变量x和epsilon所指定的值，并不具备通用性。如果想要重用它，需要复制整段代码，修改变量名，然后粘贴到需要使用的地方。因此很难在其他更复杂的应用中**重复使用**这段代码。
@@ -75,11 +75,11 @@ def关键字告诉Python即将定义一个函数。
 ##### 1.2) 关键字参数和默认值
 
 ```python
-def printName(firstName, lastName, reverse):
+def print_name(firstName, lastName, reverse):
     if reverse:
-        print lastName + ',' + firsrName
+        print(lastName + ',' + firsrName)
     else:
-        print firstName,lastName
+        print(firstName,lastName)
 ```
 
 关键字参数：形参根据名称绑定到实参。上面例子中reverse的默认值是True.
@@ -87,11 +87,11 @@ def printName(firstName, lastName, reverse):
 在定义函数时，可以设定参数的默认值，例如
 
 ```python
-def printName(firstName, lastName, reverse = False):
+def print_name(firstName, lastName, reverse = False):
     if reverse:
-        print lastName + ',' + firstName
+        print(lastName + ',' + firstName)
     else:
-        print firstName,lastName
+        print(firstName,lastName)
 ```
 如果使用默认值，程序员在调用函数是就可以不传入所有参数。
 
@@ -201,8 +201,8 @@ def test_fib(n):
     for i in range(n+1):
         global NUM_FIB_CALLS
         NUM_FIB_CALLS = 0
-        print 'fib of', i, '=',fib(i)
-        print 'fib called',NUM_FIB_CALLS,'time.'
+        print('fib of', i, '=',fib(i))
+        print('fib called',NUM_FIB_CALLS,'time.')
 ```
 
 在这两个函数中，**global NUM_FIB_CALLS** 这行代码告诉Python这个名称应该被定义在模块的最外层的作用域中，而不是在本行代码坐在的函数作用域中定义——尽管在fib和test_fib 函数中**NUM_FIB_CALLS**都出现在赋值语句左侧。（我们并没有使用语句global NUM_FIB_CALLS,所以NUM_FIB_CALLS在fib和test_fib中都是局部变量。）函数fib和test_fib都可以随意访问变量NUM_FIB_CALLS指向的对象。函数test_fib每次调用fib时都会将NUM_FIB_CALLS绑定到0，fib每次被执行时都会将NUM_FIB_CALLS的值加fib。
