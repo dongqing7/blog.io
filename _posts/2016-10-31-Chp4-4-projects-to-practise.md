@@ -8,10 +8,12 @@ description: 教授这门课不是义务，准备的本身就是报酬。
 ---
 
 
-本章包含内容如下：
+4个小项目如下：
 
-* 1、函数、作用域和规范抽象
-* 2、列表、元组和字典
+* 1、模拟掷骰子
+* 2、猜数字
+* 3、疯狂的故事大王（Mad Libs Generator）
+* 4、大冒险（文字版）
 
 
 说明，练习项目的信息来源于：http://knightlab.northwestern.edu/2014/06/05/five-mini-programming-projects-for-the-python-beginner/
