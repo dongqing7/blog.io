@@ -92,7 +92,25 @@ print('The programming is closing...')
 - 循环 （while）
 
 ```python
+import random
 
+count = 6
+chosen_digit = random.randrange(1, 100)
+print('Guess what I have? Your have %s times' % count)
+
+while count > 0:
+    guess_num = int(input())
+    if guess_num == chosen_digit:
+        print('Great! You get it at %s guess!' % count)
+        break
+    elif guess_num > chosen_digit:
+        print('No, too big! %s times left, my dear!' % (count))
+    elif guess_num < chosen_digit:
+        print('No, too small! %s times left, my dear!' % (count))
+    
+    count -= 1
+    
+print('What a pity, you have missed the %s million $' % chosen_digit)
 ```
 
 ## 项目3. 疯狂的故事大王（Mad Libs Generator）
