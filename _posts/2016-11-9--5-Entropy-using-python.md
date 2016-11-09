@@ -99,5 +99,5 @@ if __name__ == '__main__':
       [chr(random.randint(0, 255)) for _ in range(32240)] )
     
     results = list(entropy_scan(data))
-    plotting(results, r'D:\Post-DOC\df.png')
+    plotting(results, r'df.png')
 ```
