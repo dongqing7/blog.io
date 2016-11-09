@@ -29,6 +29,7 @@ description: 教授这门课不是义务，准备的本身就是报酬。
 
 
 首先，我们需要引入一下pakcage，
+
 ```python
 import math
 from pylab import *
@@ -38,6 +39,7 @@ from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 ```
 
 定义用于计算熵值的函数H
+
 ```python
 import math
 
